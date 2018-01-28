@@ -1,0 +1,3 @@
+/**
+ * Using http://lokijs.org/#/
+ */
