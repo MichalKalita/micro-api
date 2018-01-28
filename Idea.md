@@ -10,13 +10,12 @@ Programmer can work only on Application, not backend.
 
 Targets
 -------
-# Super easy API
-# Super easy integration
-# Completely modular system
+# Easy to use
+# Horizontal scaling
 # 100% open source
+# Modular
+# Core require only Node.js
 # Possible use of server code in browser
-# Single requirements that is Node.js in serverside
-# Maximal easy source code
 # Minimal HW requirements (Raspberry should run full functionality server with response < 100ms)
 # Security
 # Easy to learn (self describe)
