@@ -12,7 +12,9 @@
     "express": "^4.16.2",
     "express-query-int": "^2.0.0",
     "http-status-codes": "^1.3.0",
-    "mongodb": "^2.2.33"
+    "kue": "^0.11.6",
+    "lokijs": "^1.5.1",
+    "pubsub-js": "^1.6.0"
   },
   "devDependencies": {
     "eslint": "^4.9.0"
