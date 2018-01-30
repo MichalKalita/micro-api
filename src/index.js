@@ -1,11 +1,6 @@
-const gateway = require('./gateway');
-const project = require('./project');
-const events = require('./events');
-const permission = require('./permission');
-const keyValue = require('./key_value');
-const queue = require('./queue');
-const dynamicObject = require('./dynamic_object');
+/*
 
+TODO: in project usage
 
 gateway.addProject(project);
 
@@ -15,4 +10,13 @@ keyValue.setup(project);
 queue.setup(project);
 dynamicObject.setup(project);
 
-gateway.start({port: 80});
+Gateway.start({port: 80});
+*/
+
+export {default as Gateway} from './gateway'
+export {default as Project} from './project'
+export {default as Events} from './events'
+export {default as Permission} from './permission'
+export {default as KeyValue} from './key_value'
+export {default as Queue} from './queue'
+export {default as DynamicObject} from './dynamic_object'
