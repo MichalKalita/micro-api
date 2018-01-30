@@ -47,7 +47,7 @@ Depends on installed modules, this is describe of all modules.
 
 
 Way of request
-Internet -> Gateway -> Permission -> |Watchers| Project container / KV / Queue / Data
+Internet -> Gateway -> Project -> Authenticator -> Permission -> Events / KV / Queue / Data
 
 Arrows show visibility model, internal modules don't know about external.
 

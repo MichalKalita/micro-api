@@ -3,8 +3,8 @@
  * 
  */
 
-// import Auth from '../authentication'
-// import Permission from '../permission'
+import Auth from '../authentication'
+import Permission from '../permission'
 
 import KeyValue from '../key_value'
 
