@@ -5,6 +5,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "build": "babel src -d lib",
     "start": "node src/index.js"
   },
   "dependencies": {
