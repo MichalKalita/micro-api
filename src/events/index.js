@@ -14,3 +14,4 @@ W.describe({target, action, filter}); // return describe id
 W.undescribe(describeId);
 */
 
+export default {}

@@ -12,6 +12,11 @@ export default class {
     }
 
     delete(key) {
-        delete this.data[key];
+        if(key in this.data) {
+            delete this.data[key];
+            return true;
+        } else {
+            return false;
+        }
     }
 }
