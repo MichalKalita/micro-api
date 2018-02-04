@@ -6,28 +6,37 @@
 import Auth from '../authentication'
 import Permission from '../permission'
 
-import KeyValue from '../key_value'
+export default class Project {
+    constructor() {
+        this.auth = new Auth()
+        this.permission = new Permission()
+    }
 
-export default class {
-    request(request) {
-        const internal = {}
+    request(requestData) {
+        const request = {}
+        request.data = requestData
+        request.auth = {}
+        request.response = {}
 
-        if('auth' in request) {
-            internal.auth = Auth.login(request.auth)
-        }
+        this.auth.login(request)
+        this.processError(request)
 
-        if(Permission.validate(request, internal)) {
+        if (this.permission.validate(request)) {
             // OK request is valid
+            this.processError(request)
         } else {
-            throw internal.error
+            throw Error('Missing permission')
         }
 
-        switch(request.module) {
-            case 'key_value':
-                KeyValue.process(request, internal)
-                break
-            default:
-                throw 'Module not matched'
+        // Run function
+        request.response = {msg: 'Hello :)'}
+
+        return request.response
+    }
+
+    processError(request) {
+        if('error' in request) {
+            throw Error(request.error)
         }
     }
 }
