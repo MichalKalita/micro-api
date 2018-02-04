@@ -10,21 +10,21 @@ Programmer can work only on Application, not backend.
 
 Targets
 -------
-# Easy to use
-# Horizontal scaling
-# 100% open source
-# Modular
-# Core require only Node.js
-# Possible use of server code in browser
-# Minimal HW requirements (Raspberry should run full functionality server with response < 100ms)
-# Security
-# Easy to learn (self describe)
+1. Easy to use
+2. Horizontal scaling
+3. 100% open source
+4. Modular
+5. Core require only Node.js
+6. Possible use of server code in browser
+7. Minimal HW requirements (Raspberry should run full functionality server with response < 100ms)
+8. Security
+9. Easy to learn (self describe)
 
 Second level targets
 --------------------
-# Use JavaScript
-# Use minimal number of requirements
-# Well documented 
+1. Use JavaScript
+2. Use minimal number of requirements
+3. Well documented 
 
 Browser
     Application Code
