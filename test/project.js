@@ -15,4 +15,14 @@ describe('Project', function () {
             {msg: 'pong'}
         )
     })
+
+    it('before request', () => {
+        const p = new Project()
+        p.beforeRequest(() => {throw Error('Error in before request')})
+
+        assert.throws(
+            () => p.request(),
+            /Error in before request/
+        )
+    })
 });
