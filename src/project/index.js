@@ -10,8 +10,15 @@ export default class Project {
     constructor() {
         this.auth = new Auth()
         this.permission = new Permission()
+
+        this.modules = {}
     }
 
+    /**
+     * Process request
+     * @param {*} requestData 
+     * @returns response data
+     */
     request(requestData) {
         const request = {}
         request.data = requestData
@@ -29,9 +36,22 @@ export default class Project {
         }
 
         // Run function
-        request.response = {msg: 'Hello :)'}
+        if(requestData.module in this.modules) {
+            return this.modules[requestData.module](requestData)
+        } else {
+            throw Error(`Module '${requestData.module}' not found`)
+        }
 
         return request.response
+    }
+
+    /**
+     * Add module
+     * @param {string} name 
+     * @param {function} callback 
+     */
+    addModule(name, callback) {
+        this.modules[name] = callback
     }
 
     processError(request) {

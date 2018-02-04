@@ -6,11 +6,13 @@ describe('Project', function () {
         new Project()
     });
 
-    it('info request', () => {
+    it('add simple ping module', () => {
         const p = new Project()
+        p.addModule('ping', () => ({msg: 'pong'}))
+
         assert.deepEqual(
-            p.request({module: 'info', auth: {token: 'abc'}}),
-            {msg: 'Hello :)'}
+            p.request({module: 'ping'}),
+            {msg: 'pong'}
         )
-    });
+    })
 });
